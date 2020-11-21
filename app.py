@@ -20,7 +20,7 @@ def predict():
     with open('model/lb.pickle','rb') as f:
         lb = pickle.load(f)
     emotions = {0:'neutral',1:'anger',2:'disgust',3:'fear',4:'sad',5:'happy',6:'surprise',7:'none_of_the_above'}
-    model= load_model('model/emotions_classifier.model')
+    model= load_model('model/emotion_classifier.model')
     img = request.files['file']
     image = plt.imread(img)
     #Change RGB to BGR
